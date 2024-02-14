@@ -1,0 +1,21 @@
+calc = input("What do you want to calculate? (mass, acceleration, force): ")
+
+if calc == "force":
+  mass = float(input("What is the mass of the object? (kg): "))
+  acceleration = float(input("what is the acceleration of the object? (m/s^2): "))
+  force = mass * acceleration
+  print (force)
+elif calc == "acceleration":
+  force = float(input("What is the force of the object (N): "))
+  mass = float(input("What is the mass of the object? (kg): "))
+  acceleration = force / mass
+  print (acceleration)
+elif calc == "mass":
+  force = float(input("What is the force of the object (N): "))
+  acceleration = float(input("What is the acceleration of the object (m/s^2): "))
+  mass = force / acceleration
+  print (mass)
+else:
+  print ("Invalid input")
+  
+          
