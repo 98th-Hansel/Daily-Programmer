@@ -1,0 +1,15 @@
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+user = input("Enter your reddit username: ")
+
+print ("your name is %s, you are %s years old, and your username is %s" % (name, str(age), user))
+
+my_file = open("main.txt", "w")
+my_file.write("name: " + name + "\n")
+my_file.write("age: " + age + "\n")
+my_file.write("reddit user: " + user + "\n")
+my_file.close()
+
+a = 1998
+b = abs(a) %100
+print(b)
