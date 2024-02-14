@@ -1,0 +1,11 @@
+print ("how many bottles of beer on the wall?")
+x = input()
+bottles = int(x)
+while bottles > 0:
+  print(bottles, "bottles of beer on the wall,", bottles, "bottles of beer.")
+  bottles = bottles - 1
+  print("take one down, pass it around,", bottles, "bottles of beer on the wall.")
+if bottles == 0:
+  print("No more bottles of beer on the wall, no more bottles of beer.")
+else:
+  print("wtf")
