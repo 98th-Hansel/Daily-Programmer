@@ -1,0 +1,77 @@
+
+def is_leap(year):
+  calc_year = int(year)
+  leap_code = 0
+  if calc_year % 4 == 0 and calc_year % 100 != 0:
+    leap_code = 1
+  elif calc_year % 400 == 0:
+    leap_code = 1
+  return leap_code
+
+def month_num(month, year):
+  year_num = int(year)
+  month = month.lower()
+  count = 0
+  if month == 'january':
+    count = 0
+    return count
+  elif month == 'february':
+    count = 31
+    return count
+  elif month == 'march':
+    a = is_leap(year_num)
+    count = 59 + a
+    return count
+  elif month == 'april':
+    a = is_leap(year_num)
+    count = 90 + a
+    return count
+  elif month == 'may':
+    a = is_leap(year_num)
+    count = 120 + a
+    return count
+  elif month == 'june':
+    a = is_leap(year_num)
+    count = 151 + a
+    return count
+  elif month == 'july':
+    a = is_leap(year_num)
+    count = 181 + a
+    return count
+  elif month == 'august':
+    a = is_leap(year_num)
+    count = 212 +a
+    return count
+  elif month == 'september':
+    a = is_leap(year_num)
+    count = 243 + a
+    return count
+  elif month == 'october':
+    a = is_leap(year_num)
+    count = 273 + a
+    return count
+  elif month == 'november':
+    a = is_leap(year_num)
+    count = 304 + a
+    return count
+  elif month == 'december':
+    a = is_leap(year_num)
+    count = 334 + a
+    return count
+  else:
+    return count
+
+def day_calc(day, month, year):
+  day_num = int(day)
+  month_calc = month
+  year_num = int(year)
+  month_calc = month_num(month_calc, year_num)
+  total_days = day_num + month_calc
+  return print(total_days)
+
+month = input('Enter the name of the month: ')
+day = input('Enter the day of the month: ')
+year = input('Enter what year it is: ')
+day_calc(day, month, year)
+                  
+  
