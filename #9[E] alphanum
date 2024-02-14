@@ -1,0 +1,7 @@
+print ("input any series of numbers or letters")
+x = input()
+alphanum = []
+for i in x:
+  alphanum.append(i)
+alphanum.sort()
+print ("sorted: ", *alphanum, sep = '')
