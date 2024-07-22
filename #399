@@ -1,0 +1,11 @@
+def letter_sum(s):
+  letter_value = {
+    chr(i): i - 96 for i in range(97, 123)
+    }
+  total_sum = sum(letter_value[letter] for letter in s)
+
+  return total_sum
+
+input_string = input("enter a string: ")
+result = letter_sum(input_string)
+print(result)
