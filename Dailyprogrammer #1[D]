@@ -1,0 +1,21 @@
+import random
+
+guess_num = int(input("please enter a number between 1 and 100: "))
+if guess_num < 1 or guess_num > 100:
+  print("invalid number")
+else:
+  low_bound = 1
+  high_bound = 100
+  guess = random.randint(low_bound,high_bound)
+  print("is this guess (c)orrect, (h)igher, or (l)ower? ", guess)
+  answer = input()
+  while answer != "c":
+    if answer == "h":
+      high_bound = guess - 1
+    elif answer == "l":
+      low_bound = guess + 1
+    guess = random.randint(low_bound, high_bound)
+    print("Is this guess (c)orrect, (h)igher, or (l)ower? ", guess)
+    answer = input()
+  print("correct")
+  
